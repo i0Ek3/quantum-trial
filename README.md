@@ -13,29 +13,22 @@ Problem we have met:
 The reason is there is a need for a .csproj file to fetch info to build, but we don't have the file. So we recreated a Q# project using VS Code, and now we have this file. After then, you will see follows log message, that's means you can build it successful:
 
 ```
-quantum-trial/quantum [master●] » dotnet build
-Microsoft (R) Build Engine version 16.7.1+52cd83677 for .NET
+quantum-trial/quantum [master●] » dotnet build # dotnet version is 5.0.100
+Microsoft (R) Build Engine version 16.8.0+126527ff1 for .NET
 Copyright (C) Microsoft Corporation. All rights reserved.
 
   Determining projects to restore...
-  Restored /xxx/quantum-trial/quantum/quantum.csproj (in 530 ms).
-/xxx/quantum-trial/quantum/Program.qs(35,18): warning QS5002: This expression may be short-circuited, and operation calls may not be executed. [/xxx/quantum-trial/quantum/quantum.csproj]
-
-  ____________________________________________
-
-  Q#: Success! (0 errors, 1 warning)
-
+  All projects are up-to-date for restore.
   quantum -> /xxx/quantum-trial/quantum/bin/Debug/netcoreapp3.1/quantum.dll
 
 Build succeeded.
-
-/xxx/quantum-trial/quantum/Program.qs(35,18): warning QS5002: This expression may be short-circuited, and operation calls may not be executed. [/xxx/quantum-trial/quantum/quantum.csproj]
-    1 Warning(s)
+    0 Warning(s)
     0 Error(s)
 
-Time Elapsed 00:00:15.70
+Time Elapsed 00:00:01.22
 ```
+So, do not create .qs file only, also you need to create .csproj file.
 
 ## Reference
 
-- [https://docs.microsoft.com/zh-cn/quantum/quickstarts/install-python?tabs=tabid-dotnetcli](https://docs.microsoft.com/zh-cn/quantum/quickstarts/install-python?tabs=tabid-dotnetcli)
+- [https://docs.microsoft.com/en-us/quantum/](https://docs.microsoft.com/en-us/quantum/) ~~机翻可耻！~~
